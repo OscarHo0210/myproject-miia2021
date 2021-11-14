@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class GuessNumber {
     public static void main(String[] args) {
         Random random = new Random();
-        int hideNumber = random.nextInt();
+        int hideNumber = random.nextInt(10)+1;
         System.out.println(hideNumber);
         System.out.println("Please enter your number: ");
         Scanner scanner = new Scanner(System.in);
