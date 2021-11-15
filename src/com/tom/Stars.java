@@ -6,7 +6,7 @@ public class Stars {
             for (int j = 0; j < 20; j++){
                 if (i == 1 || i == 8){
                     System.out.print(" ");
-                }else if (i == 2){
+                }else{
                     System.out.print("*");
                 }
             }

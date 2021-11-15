@@ -6,12 +6,13 @@ public class StarBig {
             for (int j = 0; j <= 20; j++){
                 if (i <= 5 && 2*i == j){
                         System.out.print("*");
-                 } else if (i > 5 && 2 * i == 20 - j){
+                 }
+                else if (i > 5 && 2 * i == 20 - j){
                         System.out.print("*");
-                    }else{
-                        System.out.print(" ");
-                    }
+                }else{
+                    System.out.print(" ");
                 }
+            }
 
             System.out.println();
 
