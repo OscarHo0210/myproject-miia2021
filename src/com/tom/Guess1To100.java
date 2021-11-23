@@ -11,26 +11,37 @@ public class Guess1To100 {
         int start = 1;
         int end = 100;
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter number between 1-100");
 
-        for (int i = 0; i < 3; i++){
-            System.out.println("Please enter your number: ");
+
+        for (int i =0; i<5; i++){
             int number = scanner.nextInt();
+
             if (number > hideNumber){
-                if (end>number){
-                    end =  number;
+                if (end > number){
+                    end = number;
                 }
-                System.out.println("Smaller " + start + "~" + end);
+                System.out.println("Smaller, the number is " + start + " ~ "+ end);
             }else if (number < hideNumber){
-                if (start<number){
+                if (start < number){
                     start = number;
                 }
-                System.out.println("Bigger " + start + "~" + end);
+                System.out.println("Bigger, the number is " + start + " ~ "+ end);
+
             }else if (number == hideNumber){
-                System.out.println("Bingo");
+                System.out.println("You win");
                 break;
             }
+
+            if (i == 4){
+                System.out.println("You loose");
+                break;
+            }
+
+
         }
-                System.out.println("BYE!");
+
+
     }
 
 }

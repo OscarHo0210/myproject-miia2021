@@ -2,7 +2,7 @@ package com.tom;
 
 public class UsingSwitch {
     public static void main(String[] args) {
-        int i = 0;
+        int i = 1;
 
         switch (i){
             case 1:
@@ -13,7 +13,7 @@ public class UsingSwitch {
                 break;
             default:
                 System.out.println("other");
-                break;
+                //break;
         }
 
         System.out.println("end");
