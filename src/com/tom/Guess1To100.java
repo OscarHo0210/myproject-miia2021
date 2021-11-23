@@ -10,6 +10,7 @@ public class Guess1To100 {
         System.out.println(hideNumber);
         int start = 1;
         int end = 100;
+        boolean win = false;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter number between 1-100");
 
@@ -28,14 +29,15 @@ public class Guess1To100 {
                 }
                 System.out.println("Bigger, the number is " + start + " ~ "+ end);
 
-            }else if (number == hideNumber){
-                System.out.println("You win");
+            }else{
+                win = true;
                 break;
             }
 
-            if (i == 4){
+            if (win){
+                System.out.println("You win");
+            }else{
                 System.out.println("You loose");
-                break;
             }
 
 
