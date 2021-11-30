@@ -6,11 +6,17 @@ public class VendingMachine {
     public static void main(String[] args) {
         int total = 0;
         boolean end = false;
-        int aDrinkPrice = 15;
-        int bDrinkPrice = 25;
-        int cDrinkPrice = 30;
-        Scanner scanner = new Scanner(System.in);
+        //int aDrinkPrice = 15;
+        //int bDrinkPrice = 25;
+        //int cDrinkPrice = 30;
+        int[] prices = {15, 25, 30, 22, 18};
+        System.out.println(prices.length);
+        System.out.println(prices[0]);
+        for (int i = 0; i< prices.length; i++){
+            System.out.println(prices[i]);
+        }
 
+        Scanner scanner = new Scanner(System.in);
         while (!end){
             System.out.println("Please put your coin(1/5/10) total: " + total);
             String s = scanner.next();
@@ -27,23 +33,15 @@ public class VendingMachine {
                         i++;
                         break;
                     case "a":
-                        if (total >= aDrinkPrice){
-                            System.out.println("DON");
-                            total-=aDrinkPrice;
-                        }else {
-                            System.out.println("BEEP");
-                        }
-                        break;
                     case "b":
-                        if (total >= bDrinkPrice){
-                            System.out.println("DON");
-                        }else {
-                            System.out.println("BEEP");
-                        }
-                        break;
                     case "c":
-                        if (total>=cDrinkPrice){
+                    case "d":
+                    case "e":
+                        System.out.println(s.charAt(0));
+                        int index = s.charAt(0)-97;
+                        if (total>=prices[index]){
                             System.out.println("DON");
+                            total-=prices[index];
                         }else {
                             System.out.println("BEEP");
                         }
@@ -61,8 +59,8 @@ public class VendingMachine {
                 if (s.equals("a")){
                     System.out.println("Drink A");
                 }
-                if (total >= aDrinkPrice){
-                    total = total - aDrinkPrice;
+                if (total >= prices[0]){
+                    total = total - prices[0];
                     System.out.println("DON");
                 }else {
                     System.out.println("BEEP");
