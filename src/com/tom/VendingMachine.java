@@ -8,6 +8,7 @@ public class VendingMachine {
         boolean end = false;
         int aDrinkPrice = 15;
         int bDrinkPrice = 25;
+        int cDrinkPrice = 30;
         Scanner scanner = new Scanner(System.in);
 
         while (!end){
@@ -24,6 +25,28 @@ public class VendingMachine {
                         total+=n;
                         int i = 0;
                         i++;
+                        break;
+                    case "a":
+                        if (total >= aDrinkPrice){
+                            System.out.println("DON");
+                            total-=aDrinkPrice;
+                        }else {
+                            System.out.println("BEEP");
+                        }
+                        break;
+                    case "b":
+                        if (total >= bDrinkPrice){
+                            System.out.println("DON");
+                        }else {
+                            System.out.println("BEEP");
+                        }
+                        break;
+                    case "c":
+                        if (total>=cDrinkPrice){
+                            System.out.println("DON");
+                        }else {
+                            System.out.println("BEEP");
+                        }
                         break;
                     case "0":
                         end = true;
@@ -44,7 +67,6 @@ public class VendingMachine {
                 }else {
                     System.out.println("BEEP");
                 }
-
                 break;
             }
         }
