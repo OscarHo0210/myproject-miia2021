@@ -37,8 +37,8 @@ public class VendingMachine {
                     case "c":
                     case "d":
                     case "e":
-                        System.out.println(s.charAt(0));
-                        int index = s.charAt(0)-97;
+                        System.out.println(s.compareTo(s));
+                        int index = s.compareTo(s);
                         if (total>=prices[index]){
                             System.out.println("DON");
                             total-=prices[index];
