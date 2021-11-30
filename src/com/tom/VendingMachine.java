@@ -15,14 +15,17 @@ public class VendingMachine {
             String s = scanner.next();
 
             try {
-                int coin = Integer.parseInt(s);
-                switch (coin){
-                    case 1:
-                    case 5:
-                    case 10:
-                        total = total + coin;
+                switch (s){
+                    case "1":
+                    case "5":
+                    case "10":
+                        int n = Integer.parseInt(s);
+                        //total = total + coin;
+                        total+=n;
+                        int i = 0;
+                        i++;
                         break;
-                    case 0:
+                    case "0":
                         end = true;
                         System.out.println("end");
                         break;
