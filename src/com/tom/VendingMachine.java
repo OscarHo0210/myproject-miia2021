@@ -55,7 +55,6 @@ public class VendingMachine {
                 }
 
             }catch (NumberFormatException e){
-                System.out.println("Wrong");
                 if (s.equals("a")){
                     System.out.println("Drink A");
                 }
