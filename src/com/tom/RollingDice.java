@@ -30,6 +30,8 @@ public class RollingDice {
                 case 6:
                     dices[5]++;
                     break;
+                default:
+                    System.out.println("end");
             }
         }
         for (int j =0; j< dices.length; j++){
