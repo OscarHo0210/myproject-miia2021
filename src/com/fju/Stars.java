@@ -1,4 +1,4 @@
-package com.tom;
+package com.fju;
 
 public class Stars {
     public static void main(String[] args) {
