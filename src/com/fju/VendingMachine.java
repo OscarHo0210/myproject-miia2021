@@ -1,4 +1,4 @@
-package com.tom;
+package com.fju;
 
 import java.util.Scanner;
 
