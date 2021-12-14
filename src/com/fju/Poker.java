@@ -8,7 +8,7 @@ public class Poker {
         System.out.println("------------------------------------------");
         //array
         char[] pokers = {'C', 'D', 'H', 'S'};
-        //判斷位置
+        //呼叫length method、charAt method
         String s = "CDHS";
         System.out.println(s.length());
         System.out.println(s.charAt(0));
