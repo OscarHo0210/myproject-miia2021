@@ -8,6 +8,11 @@ public class Poker {
         System.out.println("------------------------------------------");
         //array
         char[] pokers = {'C', 'D', 'H', 'S'};
+        //判斷位置
+        String s = "CDHS";
+        System.out.println(s.length());
+        System.out.println(s.charAt(0));
+        System.out.println("------------------------------------------");
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 13; j++) {
                 System.out.print((j+1)  + "" + pokers[i] + " ");
