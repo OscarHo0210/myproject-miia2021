@@ -10,4 +10,11 @@ public class Dice {
         Random random = new Random();
         point = random.nextInt(6)+1;
     }
+    public boolean isMax(){
+        if (point ==6){
+            return true;
+        }else {
+            return false;
+        }
+    }
 }

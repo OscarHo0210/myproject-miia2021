@@ -10,40 +10,30 @@ public class Guess1To100 {
         System.out.println(hideNumber);
         int start = 1;
         int end = 100;
-        boolean win = false;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please enter number between 1-100");
+        System.out.println("Please enter a number between 1 to 100");
 
-
-        for (int i =0; i<5; i++){
+        for (int i = 0; i<5; i++){
             int number = scanner.nextInt();
-
-            if (number > hideNumber){
-                if (end > number){
+            if (number>hideNumber){
+                if (end>number){
                     end = number;
                 }
-                System.out.println("Smaller, the number is " + start + " ~ "+ end);
-            }else if (number < hideNumber){
-                if (start < number){
+                System.out.println("Please enter a number between " +start+" To "+ end);
+            }else if (number<hideNumber){
+                if (start<number){
                     start = number;
                 }
-                System.out.println("Bigger, the number is " + start + " ~ "+ end);
-
-            }else{
-                win = true;
+                System.out.println("Please enter a number between " +start+" To "+ end);
+            }else if (number==hideNumber){
+                System.out.println("You win, the number is "+hideNumber);
                 break;
             }
 
-            if (win){
-                System.out.println("You win");
-            }else{
-                System.out.println("You loose");
+            if (i==4){
+                System.out.println("You loose, the number is "+ hideNumber);
+                break;
             }
-
-
         }
-
-
     }
-
 }
