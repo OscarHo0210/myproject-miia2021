@@ -13,12 +13,12 @@ public class GuessGame {
 
         for (int i = 0; i<5; i++){
             int number = scanner.nextInt();
-            if (number>n.hideNumber){
+            if (n.bigger(number)){
                 if (end>number){
                     end = number;
                 }
                 System.out.println("Please enter a number between " +start+" To "+ end);
-            }else if (number<n.hideNumber){
+            }else if (n.smaller(number)){
                 if (start<number){
                     start = number;
                 }
@@ -27,7 +27,6 @@ public class GuessGame {
                 System.out.println("You win, the number is "+n.hideNumber);
                 break;
             }
-
             if (i==4){
                 System.out.println("You loose, the number is "+ n.hideNumber);
                 break;
