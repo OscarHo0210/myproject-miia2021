@@ -4,18 +4,15 @@ public class DiceCounter {
     public static void main(String[] args) {
         int[] counters = new int[6];
         for (int i = 0; i < 10; i++) {
-            Dice dice1 = new Dice();
-            Dice dice2 = new Dice();
-            dice1.roll();
-            System.out.print(dice1.point);
-            String string = dice1.isMax()? "*" : "";
-            System.out.println(string);
+            Dice dice = new Dice();
+            System.out.print(dice.point);
+            System.out.println(dice.isMax()? "*" : "");
             /*if (dice1.isMax()){
                 System.out.println("*");
             }else {
                 System.out.println();
             }*/
-            counters[dice1.point-1]++;
+            counters[dice.point-1]++;
         }
         int max = 0;
         int point = 0;
