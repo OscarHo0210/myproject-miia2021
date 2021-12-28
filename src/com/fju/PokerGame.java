@@ -41,7 +41,9 @@ public class PokerGame {
 
         if (playerPoint > computerPoint || (playerType > computerType && player == computerType)){
             System.out.println("You win");
-        }else {
+        }else if (playerPoint == 1){
+            System.out.println("You win");
+        } else {
             System.out.println("You loose");
         }
 
