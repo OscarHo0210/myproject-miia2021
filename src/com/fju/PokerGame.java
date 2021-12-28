@@ -7,6 +7,26 @@ public class PokerGame {
         Random random = new Random();
         char[] type = {'C', 'D', 'H', 'S'};
 
+        int[] cards = new int[52];
+        //準備
+        for (int i = 0; i < 52; i++) {
+            cards[i] = i;
+            System.out.print(cards[i] + " ");
+        }
+        System.out.println();
+        //洗牌
+        for (int i = 0; i < 52; i++) {
+            int r = random.nextInt(52);
+            int tmp = cards[i];
+            cards[i] = cards[r];
+            cards[r] = tmp;
+        }
+        for (int i = 0; i < 52; i++) {
+            System.out.print(cards[i] + "　");
+        }
+        System.out.println();
+        System.out.println("--------------------------------------------------");
+
         //computer
         int computer = random.nextInt(52);
         int computerPoint = computer%13+1;
