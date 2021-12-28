@@ -3,27 +3,24 @@ package com.tom;
 import java.util.Random;
 
 public class Number {
-    Random random = new Random();
-    int hideNumber = random.nextInt(10)+1;
+    int hideNumber;
+    int saveTimes;
 
-    public boolean bigger(int n){
-        if (n > hideNumber){
-            return true;
-        }else if (n == hideNumber){
-            return true;
-        }else {
-            return false;
-        }
+    void generateNumber(int range){
+        Random random = new Random();
+        hideNumber = random.nextInt(range)+1;
+        System.out.println(hideNumber);
     }
 
-    public boolean smaller(int n){
-        if (n < hideNumber){
-            return true;
-        }else if (n == hideNumber){
-            return true;
-        }else {
-            return false;
-        }
+    void setGuessTimes(int times){
+        saveTimes = times;
     }
 
+    int getGuessTimes() {
+        return saveTimes;
+    }
+
+    int getGuessResult(int number) {
+        return number - hideNumber;
+    }
 }
