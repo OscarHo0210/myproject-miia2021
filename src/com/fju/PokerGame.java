@@ -29,8 +29,8 @@ public class PokerGame {
 
         //computer
         int computer = random.nextInt(52);
-        int computerPoint = computer%13+1;
-        int computerType = computer/13;
+        int computerPoint = computer%13+1; //點數 1~13
+        int computerType = computer/13; //花色 0~3
         System.out.println("Computer: " + computerPoint + "" + type[computerType] + "(" + computer + ")");
 
         //player
@@ -39,7 +39,8 @@ public class PokerGame {
         int playerType = player/13;
         System.out.println("Player: " + playerPoint + "" + type[playerType] + "(" + player + ")");
 
-        if (playerPoint > computerPoint || (playerType > computerType && player == computerType)){
+        //玩家點數>電腦點數 或 (玩家花色>電腦花色 && 玩家點數==電腦點數)
+        if (playerPoint > computerPoint || (playerType > computerType && playerPoint == computerPoint)){
             System.out.println("You win");
         }else if (playerPoint == 1){
             System.out.println("You win");
