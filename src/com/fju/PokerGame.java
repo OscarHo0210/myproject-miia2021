@@ -17,12 +17,15 @@ public class PokerGame {
         //洗牌
         for (int i = 0; i < 52; i++) {
             int r = random.nextInt(52);
+            if (cards[i] == r){
+                System.out.println("error" + r);
+            }
             int tmp = cards[i];
             cards[i] = cards[r];
             cards[r] = tmp;
         }
         for (int i = 0; i < 52; i++) {
-            System.out.print(cards[i] + "　");
+            System.out.print(cards[i] + " ");
         }
         System.out.println();
         System.out.println("--------------------------------------------------");
@@ -39,14 +42,31 @@ public class PokerGame {
         int playerType = player/13;
         System.out.println("Player: " + playerPoint + "" + type[playerType] + "(" + player + ")");
 
+        if (playerPoint == 1 || computerPoint == 1){
+            if (playerPoint == computerPoint){
+                if (playerType > computerType){
+                    System.out.println("You win");
+                }else {
+                    System.out.println("You lose");
+                }
+            }else if (playerPoint == 1){
+                System.out.println("You win");
+            }else {
+                System.out.println("You lose");
+            }
+        }else if (playerPoint > computerPoint || (playerType > computerType && playerPoint == computerPoint)){
+            System.out.println("You win");
+        }else {
+            System.out.println("You lose");
+        }
         //玩家點數>電腦點數 或 (玩家花色>電腦花色 && 玩家點數==電腦點數)
-        if (playerPoint > computerPoint || (playerType > computerType && playerPoint == computerPoint)){
+        /*if (playerPoint > computerPoint || (playerType > computerType && playerPoint == computerPoint)){
             System.out.println("You win");
         }else if (playerPoint == 1){
             System.out.println("You win");
         } else {
             System.out.println("You loose");
-        }
+        }*/
 
     }
 }
