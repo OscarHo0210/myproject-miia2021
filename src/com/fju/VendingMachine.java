@@ -3,6 +3,7 @@ package com.fju;
 import java.util.Scanner;
 
 public class VendingMachine {
+    //會考
     public static void main(String[] args) {
         int total = 0;
         boolean end = false;

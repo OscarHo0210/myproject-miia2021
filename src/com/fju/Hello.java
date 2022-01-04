@@ -5,6 +5,7 @@ public class Hello {
         //類別是什麼 Hello String System
         //變數 args
         //方法println()
+        //取變數
         System.out.println("Hello");
 
     }

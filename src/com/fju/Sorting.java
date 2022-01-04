@@ -1,6 +1,7 @@
 package com.fju;
 
 public class Sorting {
+    //排序會考
     public static void main(String[] args) {
         int[] n = {12, 3, 6, 5, 15};
         System.out.println(n.length);
