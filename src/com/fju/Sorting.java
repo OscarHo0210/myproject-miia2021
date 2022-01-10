@@ -3,22 +3,19 @@ package com.fju;
 public class Sorting {
     //排序會考
     public static void main(String[] args) {
-        int[] n = {12, 3, 6, 5, 15};
-        System.out.println(n.length);
-        for (int i = 0; i < n.length-1; i++) {
-            System.out.print("i: " + i);
-            for (int j = i+1; j < n.length; j++) {
-                System.out.print("    " +j+",");
-                if (n[i] < n[j]) {
-                    int tmp = n[i];
-                    n[i] = n[j];
-                    n[j] = tmp;
+        int[] num = {15, 6, 13, 1, 5};
+
+        for (int i=0; i<num.length; i++){
+            for (int j=i+1; j< num.length; j++){
+                if (num[i]<num[j]){
+                    int tmp = num[i];
+                    num[i] = num[j];
+                    num[j] = tmp;
                 }
             }
-            System.out.println();
         }
-        for (int i = 0; i < n.length; i++) {
-            System.out.print(n[i] + ",");
+        for (int i =0; i< num.length; i++){
+            System.out.print(num[i] + ",");
         }
     }
 }

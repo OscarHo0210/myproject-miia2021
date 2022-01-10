@@ -24,6 +24,11 @@ public class PokerGame {
             cards[i] = cards[r];
             cards[r] = tmp;
         }
+        for (int i =3; i<20; i+= 2){
+
+        }
+
+
         for (int i = 0; i < 52; i++) {
             System.out.print(cards[i] + " ");
         }
